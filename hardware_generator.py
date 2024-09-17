@@ -101,7 +101,7 @@ def generate_code():
                 {"role": "system", "content": "You are an expert Computer enginer proficient in software and hardware development. You are master of Verilog, SystemVerilog, VHDL, C++ and other languagaes and frameworks."}, 
                 {"role": "user", "content": prompt+"\n"+details}
             ],
-            stream=True,
+            stream=False,
             max_tokens=1500,
             temperature=0.5
         )
@@ -136,7 +136,7 @@ def refine_code():
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",  # or any other model you prefer
             messages=conversation_history,
-            stream=True,
+            stream=False,
             max_tokens=1500,
             temperature=0.5
         )
