@@ -1,0 +1,4 @@
+tk==0.1.0
+plantuml==0.3.0
+pillow==10.4.0
+openai==1.44.1
